@@ -21,8 +21,9 @@ async function fetchList() {
     // parse
     result.data = await rawResults.json()
   } catch (error) {
+    // update state to display error notif, also display to console
     result.error = true
-    console.error(error)
+    console.error('Uh oh, stinky...', error)
   }
 }
 
